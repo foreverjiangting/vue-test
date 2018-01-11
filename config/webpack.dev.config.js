@@ -16,7 +16,6 @@ module.exports = {
     }, //多页应用，多个入口文件
 
     output: {
-        publicPath: "/dev/",
         path: path.resolve(__dirname, '..', 'dist'), //打包后的文件存放的地方
         filename: '[name].min.js' //打包后输出文件的文件名
     },
@@ -88,6 +87,13 @@ module.exports = {
             'process.env': {
                 'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
             }
+        }),
+        new HtmlWebpackPlugin({
+            minify: {
+                removeAttributeQuotes: true
+            },
+            hash: true,
+            template: './index.html'
         }),
 
         new webpack.HotModuleReplacementPlugin(),

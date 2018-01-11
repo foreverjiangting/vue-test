@@ -16,7 +16,6 @@ module.exports = {
     },
 
     output: {
-        publicPath: "/webResources/dist/",
         path: path.resolve(__dirname, '..', 'dist'), //打包后的文件存放的地方
         filename: './js/[name].min.js' //打包后输出文件的文件名
     },
@@ -99,6 +98,13 @@ module.exports = {
             mangle: {
                 except: ['$super', '$', 'exports', 'require']
             }
+        }),
+        new HtmlWebpackPlugin({
+            minify: {
+                removeAttributeQuotes: true
+            },
+            hash: true,
+            template: './index.html'
         }),
 
         new webpack.HotModuleReplacementPlugin(),
