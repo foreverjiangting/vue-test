@@ -7,7 +7,7 @@
             <span class="logo-a fl"></span>
             <span class="logo-b fl"></span>
             <span class="logo-c fl"></span>
-          </span>书评网</a>
+          </span>携程联盟</a>
       </div>
       <div class="mine fr">
         <div class="login">
