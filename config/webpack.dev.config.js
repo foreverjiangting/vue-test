@@ -93,6 +93,7 @@ module.exports = {
                 removeAttributeQuotes: true
             },
             hash: true,
+            inject: true,
             template: './index.html'
         }),
 
